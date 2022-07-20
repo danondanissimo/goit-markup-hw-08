@@ -1,0 +1,25 @@
+$primary-color: #212121;
+$secondary-color: #757575;
+$primary-background-color: #e5e5e5;
+$secondary-background-color: #f5f4fa;
+$additional-background-color: #2f303a;
+$accent: #2196f3;
+$accent-secondary: #ffffff;
+$additional-accent: #188ce8;
+$logo-secondary: #000000;
+$primary-icon-color: #afb1b8;
+$project-hover-background: rgba(33, 150, 243, 0.9);
+$footer-contacts: rgba(255, 255, 255, 0.6);
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+$modal-accent: #188ce8;
+
+$main-font: Roboto, sans-serif;
+$secondary-font: Raleway, sans-serif;
+
+body {
+    font-family: $main-font;
+    font-size: 14px;
+    background-color: $accent-secondary;
+    color: $primary-color;
+    letter-spacing: 0.03em;
+}

@@ -1,0 +1,48 @@
+/* Features */
+
+.features {
+
+&__item {
+        width: 270px;
+        margin: 15px;
+    }
+
+&__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+&__text {
+    color: $secondary-color;
+    line-height: 1.7;
+}
+
+&__list {
+    @extend %list;
+    display: flex;
+    margin: -15px;
+}
+
+}
+
+.features__icon {
+    width: 70px;
+    height: 70px;
+    fill: $primary-icon-color;
+
+    &-frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+            width: 270px;
+            background-color: $secondary-background-color;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+}
