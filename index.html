@@ -21,40 +21,65 @@
   <body>
     <header>
       <div class="container nav">
-        <nav class="nav">
-          <a href="./index.html" class="logo"><span class="logo__span">Web</span>Studio</a>
-          <ul class="site-nav">
-            <li class="site-nav__item">
+        <a href="./index.html" class="logo"><span class="logo__span">Web</span>Studio</a>
+        <div class="nav-menu" data-menu>
+          <nav class="nav">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a
+                  href="./index.html"
+                  class="site-nav__link site-nav__link--current site-nav__link--studio"
+                  >Студия</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contact-list">
+            <li class="contact-list__item">
               <a
-                href="./index.html"
-                class="site-nav__link site-nav__link--current site-nav__link--studio"
-                >Студия</a
+                href="mailto:info@devstudio.com"
+                class="header__contacts contacts header__contacts--mail"
+                ><svg class="mail-icon">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
               >
             </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="#" class="site-nav__link">Контакты</a>
+            <li class="contact-list__item">
+              <a href="tel:+380961111111" class="header__contacts contacts header__contacts--phone"
+                ><svg class="phone-icon">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contact-list">
-          <li class="contact-list__item">
-            <a href="mailto:info@devstudio.com" class="header__contacts contacts"
-              ><svg class="mail-icon">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-list__item">
-            <a href="tel:+380961111111" class="header__contacts contacts"
-              ><svg class="phone-icon">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="social-networks--header">
+            <li class="social-networks__item--header">
+              <a href="" class="social-networks__link--header">Instagram</a>
+            </li>
+            <li class="social-networks__item--header">
+              <a href="" class="social-networks__link--header">Twitter</a>
+            </li>
+            <li class="social-networks__item--header">
+              <a href="" class="social-networks__link--header">Facebook</a>
+            </li>
+            <li class="social-networks__item--header">
+              <a href="" class="social-networks__link--header">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="menu-button is-open" aria-expanded="false" data-menu-button>
+          <svg height="40px" width="40px" aria-label="Переключатель мобильного меню">
+            <use class="menu-button__cross" href="./images/mobile-menu.svg#icon-close"></use>
+            <use class="menu-button__menu" href="./images/mobile-menu.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -189,22 +214,30 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <img src="./images/image1.jpg" alt="Сотрудник работает за планшетом" width="370" />
+              <img
+                src="./images/image1x1.jpg"
+                alt="Сотрудник работает за планшетом"
+                width="370"
+                srcset="./images/image1x1.jpg 1x, ./images/image1x2.jpg 2x"
+              />
               <p class="advantages__overlay">Десктопные приложения</p>
             </li>
             <li class="advantages__item">
               <img
-                src="./images/image2.jpg"
+                src="./images/image2x1.jpg"
                 alt="Сотрудник адаптирует отображение страницы под телефон"
                 width="370"
+                srcset="./images/image2x1.jpg 1x, ./images/image2x2.jpg 2x"
               />
+
               <p class="advantages__overlay">Мобильные приложения</p>
             </li>
             <li class="advantages__item">
               <img
-                src="./images/image3.jpg"
+                src="./images/image3x1.jpg"
                 alt="Сотрудник работает с цветовой палитрой"
                 width="370"
+                srcset="./images/image3x1.jpg 1x, ./images/image3x2.jpg 2x"
               />
               <p class="advantages__overlay">Дизайнерские решения</p>
             </li>
@@ -217,11 +250,35 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/product-designer.jpg"
-                alt="Улыбающийся мужчина лет тридцати с бородой и в очках."
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/product-designer__mobilex1.jpg 1x,
+                    ./images/product-designer__mobilex2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/product-designer__tabletx1.jpg 1x,
+                    ./images/product-designer__tabletx2.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer.jpg            1x,
+                    ./images/product-designer__desktopx2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/product-designer.jpg"
+                  alt="Улыбающийся мужчина лет тридцати с бородой и в очках."
+                  class="team__image"
+                />
+              </picture>
               <div class="team__text">
                 <h3 class="team__staff">Игорь Демьяненко</h3>
                 <p class="team__role">Product Designer</p>
@@ -259,11 +316,34 @@
             </li>
 
             <li class="team__item">
-              <img
-                src="./images/frontend-developer.jpg"
-                alt="Длинноволосая молодая женщина в очках и пиджаке."
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/frontend-developer__mobilex1.jpg 1x,
+                    ./images/frontend-developer__mobilex2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer__tabletx1.jpg 1x,
+                    ./images/frontend-developer__tabletx2.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer.jpg            1x,
+                    ./images/frontend-developer__desktopx2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/frontend-developer.jpg"
+                  alt="Длинноволосая молодая женщина в очках и пиджаке."
+                  class="team__image"
+                />
+              </picture>
               <div class="team__text">
                 <h3 class="team__staff">Ольга Репина</h3>
                 <p class="team__role">Frontend Developer</p>
@@ -301,11 +381,25 @@
             </li>
 
             <li class="team__item">
-              <img
-                src="./images/marketing1.jpg"
-                alt="Улыбающийся кудрявый молодой мужчина в рубашке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/marketing__mobilex1.jpg 1x, ./images/marketing__mobilex2.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/marketing__tabletx1.jpg 1x, ./images/marketing__tabletx2.jpg 2x"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/marketing1.jpg 1x, ./images/marketing__desktopx2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/marketing1.jpg"
+                  alt="Улыбающийся кудрявый молодой мужчина в рубашке"
+                  class="team__image"
+                />
+              </picture>
               <div class="team__text">
                 <h3 class="team__staff">Николай Тарасов</h3>
                 <p class="team__role">Marketing</p>
@@ -343,11 +437,32 @@
             </li>
 
             <li class="team__item">
-              <img
-                src="./images/ui-designer.jpg"
-                alt="Бородатый коротковолосый мужчина в очках и татуировкой на предплечье"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ui-designer__mobilex1.jpg 1x,
+                    ./images/ui-designer__mobilex2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-designer__tabletx1.jpg 1x,
+                    ./images/ui-designer__tabletx2.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/ui-designer.jpg 1x, ./images/ui-designer__desktopx2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/ui-designer.jpg"
+                  alt="Бородатый коротковолосый мужчина в очках и татуировкой на предплечье"
+                  class="team__image"
+                />
+              </picture>
               <div class="team__text">
                 <h3 class="team__staff">Михаил Ермаков</h3>
                 <p class="team__role">UI Designer</p>
@@ -434,8 +549,8 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <div>
+      <div class="container address">
+        <div class="address-field">
           <a href="./index.html" class="logo"
             ><span class="logo__span">Web</span
             ><span class="logo__span logo__span--footer">Studio</span></a
@@ -516,5 +631,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

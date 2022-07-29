@@ -1,11 +1,16 @@
 /* Advantages */
 
 .advantages {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
         display: none;
         
     }
 
+    &__image {
+
+        width: 370px;
+        height: auto;
+    }
     padding-top: 0;
 
     &__list {

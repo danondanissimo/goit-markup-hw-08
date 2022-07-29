@@ -21,40 +21,65 @@
   <body>
     <header>
       <div class="container nav">
-        <nav class="nav">
-          <a href="./index.html" class="logo"><span class="logo__span">Web</span>Studio</a>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студия</a>
-            </li>
-            <li class="site-nav__item">
+        <a href="./index.html" class="logo"><span class="logo__span">Web</span>Studio</a>
+        <div class="nav-menu" data-menu>
+          <nav class="nav">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a
+                  href="./portfolio.html"
+                  class="site-nav__link site-nav__link--current site-nav__link--portfolio"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contact-list">
+            <li class="contact-list__item">
               <a
-                href="./portfolio.html"
-                class="site-nav__link site-nav__link--current site-nav__link--portfolio"
-                >Портфолио</a
+                href="mailto:info@devstudio.com"
+                class="header__contacts contacts header__contacts--mail"
+                ><svg class="mail-icon">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
               >
             </li>
-            <li class="site-nav__item">
-              <a href="#" class="site-nav__link">Контакты</a>
+            <li class="contact-list__item">
+              <a href="tel:+380961111111" class="header__contacts contacts header__contacts--phone"
+                ><svg class="phone-icon">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contact-list">
-          <li class="contact-list__item">
-            <a href="mailto:info@devstudio.com" class="header__contacts contacts"
-              ><svg class="mail-icon">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-list__item">
-            <a href="tel:+380961111111" class="header__contacts contacts"
-              ><svg class="phone-icon">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="social-networks--header">
+            <li class="social-networks__item--header">
+              <a href="" class="social-networks__link--header">Instagram</a>
+            </li>
+            <li class="social-networks__item--header">
+              <a href="" class="social-networks__link--header">Twitter</a>
+            </li>
+            <li class="social-networks__item--header">
+              <a href="" class="social-networks__link--header">Facebook</a>
+            </li>
+            <li class="social-networks__item--header">
+              <a href="" class="social-networks__link--header">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="menu-button is-open" aria-expanded="false" data-menu-button>
+          <svg height="40px" width="40px" aria-label="Переключатель мобильного меню">
+            <use class="menu-button__cross" href="./images/mobile-menu.svg#icon-close"></use>
+            <use class="menu-button__menu" href="./images/mobile-menu.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -84,12 +109,32 @@
           <ul class="projects__list">
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img
-                    src="./images/project1.jpg"
-                    alt="Ноутбук с открытым веб-сайтом."
-                    width="370"
-                  />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project1__mobilex1.jpg 1x,
+                        ./images/project1__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project1__tabletx1.jpg 1x,
+                        ./images/project1__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project1.jpg 1x, ./images/project1__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project1.jpg"
+                      alt="Ноутбук с открытым веб-сайтом."
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -105,12 +150,32 @@
 
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img
-                    src="./images/project2.jpg"
-                    alt="Двое мужчин играют в баскетбол."
-                    width="370"
-                  />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project2__mobilex1.jpg 1x,
+                        ./images/project2__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project2__tabletx1.jpg 1x,
+                        ./images/project2__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project2.jpg 1x, ./images/project2__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project2.jpg"
+                      alt="Двое мужчин играют в баскетбол."
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -126,12 +191,32 @@
 
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img
-                    src="./images/project3.jpg"
-                    alt="Логотип в виде рыбы в прыжке."
-                    width="370"
-                  />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project3__mobilex1.jpg 1x,
+                        ./images/project3__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project3__tabletx1.jpg 1x,
+                        ./images/project3__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project3.jpg 1x, .images/project3__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project3.jpg"
+                      alt="Логотип в виде рыбы в прыжке."
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -147,8 +232,32 @@
 
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img src="./images/project4.jpg" alt="Полноразмерные наушники." width="370" />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project4__mobilex1.jpg 1x,
+                        ./images/project4__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project4__tabletx1.jpg 1x,
+                        ./images/project4__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project4.jpg 1x, .images/project4__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project4.jpg"
+                      alt="Полноразмерные наушники."
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -164,8 +273,32 @@
 
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img src="./images/project5.jpg" alt="Две картонные коробки." width="370" />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project5__mobilex1.jpg 1x,
+                        ./images/project5__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project5__tabletx1.jpg 1x,
+                        ./images/project5__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project5.jpg 1x, .images/project5__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project5.jpg"
+                      alt="Две картонные коробки."
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -181,12 +314,32 @@
 
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img
-                    src="./images/project6.jpg"
-                    alt="Веб-сайт открытый на Mac Display"
-                    width="370"
-                  />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project6__mobilex1.jpg 1x,
+                        ./images/project6__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project6__tabletx1.jpg 1x,
+                        ./images/project6__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project6.jpg 1x, .images/project6__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project6.jpg"
+                      alt="Веб-сайт открытый на Mac Display"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -202,12 +355,32 @@
 
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img
-                    src="./images/project7.jpg"
-                    alt="Открытая книга с фотографиями."
-                    width="370"
-                  />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project7__mobilex1.jpg 1x,
+                        ./images/project7__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project7__tabletx1.jpg 1x,
+                        ./images/project7__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project7.jpg 1x, .images/project7__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project7.jpg"
+                      alt="Открытая книга с фотографиями."
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -223,12 +396,32 @@
 
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img
-                    src="./images/project8.jpg"
-                    alt="Две картонные бирки с логотипом."
-                    width="370"
-                  />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project8__mobilex1.jpg 1x,
+                        ./images/project8__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project8__tabletx1.jpg 1x,
+                        ./images/project8__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project8.jpg 1x, .images/project8__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project8.jpg"
+                      alt="Две картонные бирки с логотипом."
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -244,12 +437,32 @@
 
             <li class="projects__item">
               <a href="" class="link projects__link">
-                <div class="projects__image">
-                  <img
-                    src="./images/project9.jpg"
-                    alt="Ноутбук с открытым сайтом компании."
-                    width="370"
-                  />
+                <div class="projects__image-hover">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project9__mobilex1.jpg 1x,
+                        ./images/project9__mobilex2.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project9__tabletx1.jpg 1x,
+                        ./images/project9__tabletx2.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/project9.jpg 1x, .images/project9__desktopx2.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project9.jpg"
+                      alt="Ноутбук с открытым сайтом компании."
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="hover__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения <br />
@@ -268,8 +481,8 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <div>
+      <div class="container address">
+        <div class="address-field">
           <a href="./index.html" class="logo"
             ><span class="logo__span">Web</span
             ><span class="logo__span logo__span--footer">Studio</span></a
@@ -350,5 +563,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

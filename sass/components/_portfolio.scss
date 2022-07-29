@@ -3,8 +3,20 @@
 .filters {
     @extend %list;
     display: flex;
-    margin-bottom: 50px;
     justify-content: center;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
 }
 
 .filters__button {
@@ -32,6 +44,11 @@
         }
 }
 
+.filters__body {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+}
 
 .filters__body:not(:last-child) {
     margin-right: 8px;
@@ -45,20 +62,45 @@
             flex-wrap: wrap;
             /* background-color: teal; */
             margin: -15px;
+            @media screen and (max-width: 767px) {
+                justify-content: center;
+            }
         }
 
     &__item {
         /* background-color: tomato; */
-        width: 370px;
+        @media screen and (min-width: 480px) {
+            width: 450px;
+        }
+        @media screen and (min-width: 767px) {
+            width: 354px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 370px;
+        }
         margin: 15px;
     }
 
-    &__image {
+    &__image-hover {
         position: relative;
     
         overflow: hidden;
         transition-duration: 250ms;
         transition-timing-function: $cubic-bezier;
+    }
+
+    &__image {
+        @media screen and (max-width: 767px) {
+            width: 450px;
+        }
+                
+        @media screen and (min-width: 768px) {
+            width: 354px;
+        }
+                
+        @media screen and (min-width: 1200px) {
+            width: 370px;
+        }
     }
 
     &__block {

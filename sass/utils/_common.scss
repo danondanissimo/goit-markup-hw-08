@@ -22,8 +22,14 @@ img {
 }
 
 section {
+@media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
+}
 }
 
 
@@ -71,29 +77,35 @@ section {
 
 .section-title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
+    font-size: 28px;
+    line-height: 1.17;
     text-align: Center;
     margin-top: 0;
     margin-bottom: 50px;
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        line-height: 1.2;
+    }
 }
 
 .container {
     /* outline: 1px solid blue; */
     
-    padding: 0 15px;
-    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 
-    @media screen and (min-width: 480px) {
-    width: 480px;        
+    @media screen and (max-width: 480px) {
+        max-width: 480px;        
     }
 
     @media screen and (min-width: 768px) {
-        width: 768px;
+        max-width: 768px;
     }
 
     @media screen and (min-width: 1200px) {
-        width: 1200px;
+        max-width: 1200px;
     }
 }
 
@@ -118,8 +130,12 @@ section {
     color: $logo-secondary;
     font-family: $secondary-font;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
+    @media screen and (min-width: 1200px) {
+            font-size: 26px;
+            line-height: 1.19;
+    }
 }
 
 .logo__span {
