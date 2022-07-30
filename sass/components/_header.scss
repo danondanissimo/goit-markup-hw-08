@@ -34,10 +34,10 @@ header {
     @media screen and (max-width: 767px) {
         background-color: $accent-secondary;
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100%;
         width: 100%;
         text-align: start;
         
@@ -121,6 +121,9 @@ header {
     }
 
     &--current {
+        @media screen and (max-width: 767px) {
+            color: $accent;
+        }
         @media screen and (min-width: 768px) {
                 position: relative;
                 color: $accent;
@@ -323,7 +326,7 @@ header {
      display: flex;
      flex-wrap: wrap;
      margin-top: 64px;
-     align-self: center;
+     
     }
 
     @media screen and (min-width: 768px) {
@@ -348,6 +351,9 @@ header {
 }
 
 .social-networks__link--header {
+font-size: 18px;
+line-height: 1.22;
+letter-spacing: 0.3em;
 color: $accent;
 @extend %link;
 }

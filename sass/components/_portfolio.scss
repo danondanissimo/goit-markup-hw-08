@@ -1,5 +1,11 @@
 /* Портфолио */
 
+.projects-container {
+    @media screen and (max-width: 767px) {
+        max-width: 450px;
+    }
+}
+
 .filters {
     @extend %list;
     display: flex;
@@ -107,6 +113,9 @@
         padding: 20px 20px 20px 27px;
         border: 1px solid #eeeeee;
         border-top: none;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex-grow: 1;
+        }
     }
 
     &__title {
@@ -127,6 +136,11 @@
 }
 
 .projects__link {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     @extend %link;
     display: block;
 
