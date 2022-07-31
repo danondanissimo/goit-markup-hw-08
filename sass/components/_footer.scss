@@ -86,7 +86,9 @@
 }
 
 .address-field {
-    margin-bottom: 60px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
 }
 
 .logo__span--footer {
